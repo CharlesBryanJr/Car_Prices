@@ -14,7 +14,7 @@ A key challenge in automotive sales is setting the optimal price for cars, a fac
 
 ## Machine Learning and Deep Learning
 
-* Machine Learning and Deep Learning Advancements: Significant growth in machine learning and deep learning over the past decade, impacting various industries, including automotive.
+* <u>Machine Learning and Deep Learning Advancements:</u> Significant growth in machine learning and deep learning over the past decade, impacting various industries, including automotive.
 * Predictive Pricing Models: Potential to predict car prices using key features like horsepower, make, and others, using machine learning techniques. 
 * Optimal Pricing Strategies: Companies can utilize machine learning to determine the ideal price based on factors such as make, horsepower, and mileage, enhancing profitability. 
 * Maximizing Profits Through Precise Pricing: Machine learning models enable setting the right price for new cars, ensuring maximum profit for manufacturers. 
