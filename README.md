@@ -4,119 +4,116 @@
 
 ## Introduction
 
-There are a lot of __car manufacturers__ in the US. With the development of manufacturing units and tests, there are a lot of cars being manufactured with a lot of features. Therefore, innovators are coming up with the latest developments in the field and they are ensuring that the drivers get the best experience going on a ride in these cars.
+The U.S. car manufacturing industry is thriving, constantly introducing vehicles equipped with advanced features and technology. These innovations, driven by a commitment to enhance the driving experience, ensure that motorists enjoy superior comfort and performance in their journeys.
 
-<img src = "https://media.wired.com/photos/59547e60ce3e5e760d52d429/191:100/w_1280,c_limit/02_Bugatti-VGT_photo_ext_WEB.jpg" width = 350 height = 200/><img src = "https://github.com/suhasmaddali/Images/blob/main/Car%20Prices%20Prediction%20GitHub%20Image.jpg" width = 350 height = 200/>
-
-<img src = "https://github.com/suhasmaddali/Images/blob/main/Car%20Prices%20Prediction%20GitHub%20Image%202.jpg" width = 350 height = 200/><img src = "https://github.com/suhasmaddali/Images/blob/main/Car%20Prices%20Prediction%20GitHub%20Image%203.jpg" width = 350 height = 200/>
+<img src = "/images/cars.png" width = 350 height = 200/>
 
 ## Business Constraints / Key Performance Metrics (KPIs)
 
-However, one of the challenging aspects of running the sales for cars is to accurately give the __best price__ for cars which ensures that a lot of people buy them and there is a great demand because of this price. Factors that influence the price of cars are __mileage__, __car size__, __manufacturer__, and many others as well. But for humans to comprehensively decide the price is difficult especially when there are a lot of these features that influence the price. One of the solutions to this challenge is to use __machine learning__ and __data science__ to understand insights and make valuable predictions that generate profits for the companies. 
+A key challenge in automotive sales is setting the optimal price for cars, a factor crucial in driving demand and sales volume. The pricing decision is influenced by multiple variables, including mileage, car size, and the manufacturer, among others. The complexity and multitude of these influencing factors make it a daunting task for human analysis to pinpoint the most effective pricing strategy. An effective solution to this challenge lies in harnessing machine learning and data science. These technologies enable the extraction of deep insights from vast datasets and facilitate accurate predictions. By applying these advanced analytical tools, companies can devise pricing strategies that not only resonate with market trends and consumer preferences but also bolster profitability.
 
 ## Machine Learning and Deep Learning
 
-* __Machine Learning__ and __deep learning__ have gained rapid traction in the recent decade. 
-* It would be really helpful if we can predict the prices of a car based on a few sets of features such as __horsepower__, __make__ and __other features__. 
-* Imagine if a company wants to set the price of a car based on some of the features such as make, horsepower, and mileage. 
-* It could do so with the help of machine learning models that would help it to determine the price of a car. 
-* This would ensure that the company sets the right amount so that they get the most profits while setting such a price. 
-* Therefore, the machine learning models that we would be working with would ensure that the right price is set for new cars which would save a lot of money for car manufacturers respectively.
-* We would be working with the car prices prediction data and looking for the predictions of different kinds of cars. 
-* We would be first visualizing the data and understanding some of the information that is very important for predictions. 
-* We would be using different regression techniques to get the average price of the car under consideration.
+* Machine Learning and Deep Learning Advancements: Significant growth in machine learning and deep learning over the past decade, impacting various industries, including automotive.
+* Predictive Pricing Models: Potential to predict car prices using key features like horsepower, make, and others, using machine learning techniques. 
+* Optimal Pricing Strategies: Companies can utilize machine learning to determine the ideal price based on factors such as make, horsepower, and mileage, enhancing profitability. 
+* Maximizing Profits Through Precise Pricing: Machine learning models enable setting the right price for new cars, ensuring maximum profit for manufacturers. 
+* Car Prices Prediction Project: Focused on developing machine learning models to assist in accurate pricing of new cars, leading to cost savings for manufacturers.
+* Data Analysis and Visualization: Initial steps include visualizing the data to understand critical information for accurate car price predictions.
+* Utilizing Regression Techniques: Employing various regression methods to determine the average price of cars based on the dataset. 
+* Comprehensive Pricing Insights: Aiming for a thorough understanding of pricing dynamics to aid in informed decision-making in the automotive sector.
 
 <h2> Data Source</h2>
 
-* We would be working with quite a large data which contains about __10000__ data points where again we would be dividing that into the training set and the test set.
-* Having a look at some of the cars that we are always excited to use in our daily lives, it is better to understand how these cars are being sold and their average prices. 
-* Feel free to take a look at the dataset that was used in the process of predicting the prices of cars. Below is the link.
+We will be analyzing a substantial dataset comprising approximately 10,000 data points. This dataset will be strategically split into training and test sets to ensure the efficacy of our predictive models. Our focus extends to various popular car models, integral to our daily lives, offering a practical perspective on their sales trends and average pricing structures. For a more in-depth understanding and to appreciate the scope of our analysis, you are encouraged to explore the dataset we utilized for car price prediction.
 
 __Source:__ https://www.kaggle.com/CooperUnion/cardataset
 
 ## Metrics
 
-Predicting car prices is a __continuous machine learning problem__. Therefore, the following metrics that are useful for regression problems are taken into account. Below are the __metrics__ that was used in the process of predicting car prices.
+Predicting car prices is an continuous machine learning problem, particularly in the realm of regression analysis. To effectively address this, we have employed several key metrics specifically tailored for regression problems. These metrics have been crucial in our process of predicting car prices, ensuring accuracy and reliability in our models. Here are the metrics we used:
+
 
 * [__Mean Squared Error (MSE)__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
 * [__Mean Absolute Error (MAE)__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html)
 
 ## Exploratory Data Analysis (EDA)
 
-In this section of the project, the data is explored to see the patterns and trends and observe interesting insights. Below are some interesting observations generated.
+In this section of the project, we conducted a thorough exploration of the data to uncover patterns, trends, and intriguing insights. Our analysis yielded several notable observations:
 
-* A large number of cars were from the manufacturer __'Chevrolet'__ followed by __'Ford'__. 
-* The total number of cars manufactured during the year __2015__ was the highest in all the years found on the data.
-* There were many missing values for __'Market Category'__ feature and a few missing values for the features __'Engine HP'__ and __'Engine Cylinders'__.
-* The average prices of the cars were the highest in the year __2014__ and lowest in the year __1990__ from the data. 
-* The prices of __'Bugatti'__ manufacturer are extremely high compared to the other car manufacturers.  
-* __'Bugatti'__ manufacturer also had an extremely high value for horsepower (HP) based on the graphs in the notebook.
-* There is a __negative correlation__ between the feature __'City Mileage'__ and other features such as __'Engine Cylinders'__ and __'Engine HP'__. This is true because the higher the mileage of the car, there is higher the probability that the total number of cylinders and engine horsepower would be low. 
+* Dominance of Certain Manufacturers: A significant portion of the cars in the dataset were from Chevrolet, with Ford being the second most common manufacturer.
+* Peak Manufacturing Year: The year 2015 emerged as the year with the highest number of cars manufactured, according to the data.
+* Data Incompleteness: The 'Market Category' feature had many missing values, along with some missing data in 'Engine HP' and 'Engine Cylinders'.
+* Fluctuating Average Prices: The data revealed that the average car prices peaked in 2014 and were at their lowest in 1990.
+* High-End Manufacturer Pricing: Cars from Bugatti were exceptionally expensive compared to other manufacturers.  
+* Bugatti’s High Horsepower: Bugatti also stood out for its extremely high engine horsepower, as indicated by the graphical analysis in the notebook.
+* Correlation Insights: There was a noticeable negative correlation between 'City Mileage' and features like 'Engine Cylinders' and 'Engine HP'. This suggests that cars with higher city mileage tend to have fewer cylinders and lower horsepower.
 
 <h2> Visualizations</h2>
 
-Looking at the dataset, it can be seen that there are categories such as Vehicle Size, city mpg, popularity, and transmission types. There are other features that we would explore in visualizations. 
+Upon examining the dataset, we observed several key categories including Vehicle Size, City MPG (miles per gallon), Popularity, and Transmission Types. Additionally, there are other features within the dataset that warrant further exploration through visual analysis. These visualizations will help in gaining a deeper understanding of the interplay between these diverse aspects and their impact on vehicle performance and consumer preferences.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Data%20Image.png"/>
+<img src = "/images/data_head.png"/>
 
-We will be taking a look at a list of visualizations that can give us an understanding of the data. 
-Exploring the count of various car companies available in the dataset, it is seen that Chevrolet has the highest number of cars followed by Ford. 
+We will dive into a series of visualizations to gain insights into the dataset. By examining the distribution of car manufacturers represented, it becomes apparent that Chevrolet has the largest presence, with Ford following closely behind. These visual analyses are crucial in understanding the breadth and diversity of car brands within our data.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Total%20Cars%20Count.png"/>
+<img src = "/images/total_cars_by_manufacturer.png"/>
 
-With the progress in years, there is an increase in the demand for cars sold. This is clearly demonstrated in the visualization. In addition, our ML models would perform well on the most recent cars as we have more data in this category. 
+The visualizations clearly show a rising trend in car demand over the years, reflecting the growing automotive market. Additionally, this increase in recent data points suggests that our machine learning models are likely to be more accurate and effective when predicting prices for newer car models, due to the richer dataset available for these vehicles.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Cars%20Sold.png"/>
+<img src = "/images/cars_manufactured_by_year.png"/>
 
-Most of the cars are automatic as depicted in the plot. There are fewer manual cars compared to automatic cars. There are also a few unknown categories. 
+The plot reveals that a majority of the cars in our dataset are automatic, outnumbering their manual counterparts. Additionally, there's a small segment of vehicles categorized as 'unknown', indicating some variability in transmission types beyond the standard automatic and manual classifications.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Transmission%20type%20countplot.png"/>
+<img src = "/images/transmission_type.png"/>
 
-Most of the cars have a regular unleaded engine type. There are also electric cars in our categories. Since electric cars are new, they are low in number in the dataset. There are a few car categories that use diesel or other types of fuels. 
+The dataset predominantly features cars with regular unleaded engines, with a smaller yet notable presence of electric vehicles. Given their recent emergence, electric cars are less numerous. Additionally, a variety of other fuel types, including diesel, are represented in smaller quantities.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Engine%20type%20countplot.png"/>
+<img src = "/images/fuel_type.png"/>
 
-A large portion of cars are compact vehicle-size cars. But we tend to see that there is quite an equal distribution of cars amount the various vehicle size categories. 
+A significant number of cars in the dataset are compact-sized, but there is also a fairly even distribution among different vehicle size categories.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Countplot%20of%20vehicle%20size.png"/>
+<img src = "/images/vehicle_size.png"/>
 
-Missingno plots are useful to help us determine the total number of missing values in the dataset. There are missing values in categories such as 'Market Category' and 'Engine HP'. Based on this information, steps are taken to either impute the missing values or remove them so that they do not have an impact on the ML model performance of determining the prices of cars. 
+Missingno plots highlight gaps in our dataset, particularly in 'Market Category' and 'Engine HP'. This helps us choose whether to impute or exclude these values to maintain our machine learning models' accuracy in price prediction.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Missingno%20plot.png"/>
+<img src = "/images/missingno.png"/>
 
-The overall prices of cars were the highest for the year '2014' compared to other years. The next highest average prices of cars are in the year '2012'. The lowest prices of cars are in the year '1990'. Hence, the year is a useful feature in determining car prices based on the plot below. 
+The analysis reveals that car prices peaked in 2014, marking it as the year with the highest average prices in our dataset. This is closely followed by 2012. Conversely, 1990 stands out as the year with the lowest average car prices. These trends highlight the year of manufacture as a significant factor in determining car prices, as evidenced by the plot below.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Avg%20car%20prices%20per%20year%20plot.png"/>
+<img src = "/images/average_car_price_by_year.png"/>
 
-Cars that have both automatic and manual transmission has the highest average prices for all the years. This is followed by only automatic transmission-type cars. There are a few unknown categories that must be either removed or converted to a category as they do not aid in helping to understand the transmission type of cars.  
+The data shows that cars with both automatic and manual transmissions have the highest average prices, followed by automatic-only models. 'Unknown' transmission types in the data should be clarified or removed for more accurate analysis.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Avg%20prices%20per%20transmission%20plot.png"/>
+<img src = "/images/average_prices_by_transmission_type.png"/>
 
-The average prices of cars for companies such as Bugatti and Maybach are the highest. There is a significant difference in terms of price for companies such as Bugatti vs other cars. This is true in real life because of their popularity in the modern world. Some of the most expensive brands, according to the plot, include Bugatti, Maybach, Rolls-Royce, Lamborghini, Bentley, McLaren, and Ferrari. You can explore the plot to understand the average car prices for various car brands. 
+Luxury brands like Bugatti and Maybach top the average car prices, highlighting their market prestige and exclusivity. Other notable high-end brands include Rolls-Royce, Lamborghini, Bentley, McLaren, and Ferrari. The plot gives a clear view of the pricing trends among various car manufacturers.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/avg%20prices%20per%20company%20plot.png"/>
+<img src = "/images/average_msrp.png"/>
 
-This is a bar chart highlighting the horsepower of various car manufacturers. Without surprise, Bugatti has the highest horsepower despite having a higher price as compared to other brands. This was followed by McLaren and Mayback. These cars typically are the best in class when it comes to delivering performance. 
+The bar chart showcases the horsepower across different car manufacturers, with Bugatti leading the pack. Despite its premium pricing, Bugatti stands out for its exceptional horsepower, followed by high-performance brands like McLaren and Maybach. These cars are renowned for their top-tier performance capabilities, as reflected in their impressive horsepower ratings.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Horsepower%20plot.png"/>
+<img src = "/images/engine_horsepower.png"/>
 
-Car brands such as Ford and BMW are highly popular. Other popular brands include Audi, Ferrari, Honda, and Nissan. It can be interesting to see how much of an impact the popularity of cars has on car prices for various brands. 
+Popular car brands like Ford and BMW, along with Audi, Ferrari, Honda, and Nissan, lead in terms of consumer demand. Analyzing the influence of brand popularity on car pricing across these diverse manufacturers offers intriguing insights.
 
-<img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Popularity%20plot.png"/>
+<img src = "/images/driven_wheel_configuration.png"/>
 
-The plots on the left below show the highway MPG for all the cars in the dataset. Based on this, it is seen that there are quite a few outliers in the data. Therefore, steps are taken to remove them. 
+Segmenting the dataset by drivetrain reveals that 'all-wheel drive' (AWD) vehicles have the highest average prices, followed by 'rear-wheel drive' (RWD), with 'front-wheel drive' (FWD) being more affordable. This pricing reflects the performance capabilities and market preferences for each drivetrain type.
 
-The plots on the right show the highway MPG feature after removing the outliers from the data. In this way, the best ML model learns these features and represents them to make predictions about car prices. 
+<img src = "/images/vehicle_size.png"/>
+
+The left-hand plots display highway MPG for all dataset cars, revealing several outliers. Consequently, these outliers are removed, as seen in the right-hand plots. This refinement helps the ML model better learn and represent these features for accurate car price predictions.
 
 <img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Highway%20mgp.png"/><img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Highway%20mpg%20outliers%20removed.png"/>
 
 <img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Cith%20mpg.png"/><img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/City%20mpg%20outliers%20removed.png"/>
 
-As evident in real-life, highway MPG for a particular car tends to be higher than the city MPG. This is reflected in this plot as there is a difference in the spread and the mean for each of the categories. There are still a few outliers but we will consider some of them and get the performance of models. 
+The plot mirrors real-life trends, showing higher highway MPG compared to city MPG for most cars, evident in the differing spreads and means. While outliers exist, we'll retain some to gauge model performance.
 
 <img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/City%20Vs%20Highway%20boxplot.png"/>
 
-Building a heatmap of the correlation matrix, it is seen that engine horsepower and engine cylinders are closely related. In addition, features such as city mpg and highway mpg are also correlated with each other. 
+The heatmap of the correlation matrix reveals a strong relationship between engine horsepower and engine cylinders, as well as a notable correlation between city mpg and highway mpg.
 
 <img src = "https://github.com/suhasmaddali/Car-Prices-Prediction/blob/main/images/Heatmap%20correlation.png"/>
 
